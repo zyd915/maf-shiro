@@ -8,6 +8,6 @@ export declare class FiltersResolver {
     getMatcher(): PathMatcher;
     setFilterManager(filterManager: FilterManager): void;
     getFilterManager(): FilterManager;
-    resolve(req: any, res: any): void;
+    resolve(req: any, res: any): Promise<boolean>;
     pathMatches(pattern: string, path: string): any;
 }

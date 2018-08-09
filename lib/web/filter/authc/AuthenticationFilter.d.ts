@@ -5,7 +5,7 @@ export declare abstract class AuthenticationFilter extends AccessControlFilter {
     constructor();
     setSuccessUrl(successUrl: string): void;
     getSuccessUrl(): string;
-    isAccessAllowed(req: any, res: any, param: any): boolean;
-    onAccessDenied(req: any, res: any, param: any): boolean;
+    isAccessAllowed(req: any, res: any, param: any): Promise<boolean>;
+    onAccessDenied(req: any, res: any, param: any): Promise<boolean>;
     issueSuccessRedirect(req: any, res: any): void;
 }

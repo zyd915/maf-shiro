@@ -5,4 +5,5 @@ export declare class ShiroConfig {
     getSuccessUrl(): any;
     getUnauthorizedUrl(): any;
     getUrls(): any;
+    getSession(): any;
 }

@@ -12,11 +12,13 @@ export declare class RealmSecurityManager extends DefaultSessionManager implemen
     authenticator: Authenticator;
     authorizer: Authorizer;
     realm: any;
-    constructor(realm: any);
+    constructor(realm: any, sessionDAO?: any, config?: any);
     login(subject: Subject, token: AuthenticationToken): Subject;
     logout(subject: Subject): void;
-    createSubject(subjectContext: SubjectContext): Subject;
+    createSubject(subjectContext: SubjectContext): any;
     authenticate(token: AuthenticationToken): Promise<AuthInfo>;
+    getAuthorizer(): Authorizer;
+    setAuthorizer(authorizer: Authorizer): void;
     clear(): void;
     isPermitted(permission: any): boolean | boolean[];
     isPermittedAll(permissions: any): boolean;

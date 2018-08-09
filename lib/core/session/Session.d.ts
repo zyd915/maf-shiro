@@ -1,5 +1,6 @@
 export declare class Session {
     uid: string;
+    host: string;
     startTimestamp: Date;
     stopTimestamp: Date;
     lastAccessTime: Date;
@@ -9,6 +10,8 @@ export declare class Session {
     constructor();
     getId(): string;
     setId(uid: any): void;
+    getHost(): string;
+    setHost(host: any): void;
     getStartTimestamp(): Date;
     getLastAccessTime(): Date;
     getTimeout(): number;

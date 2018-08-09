@@ -45,5 +45,5 @@ export declare class FilterManager {
     initFilter(filter: Filter): Filter;
     applyFilterPathConfig(filter: Filter, pattern: string, authConfig: string | string[]): void;
     addDefaultFilters(init: boolean): void;
-    proxy(chainName: string): (req: any, res: any) => void;
+    proxy(chainName: string): (req: any, res: any) => Promise<boolean>;
 }

@@ -6,12 +6,13 @@ export declare abstract class AccessControlFilter extends PathMatcherFilter {
     static POST_METHOD: string;
     private loginUrl;
     constructor();
-    onExecute(req: any, res: any, param: any): boolean;
-    abstract isAccessAllowed(req: any, res: any, param: any): boolean;
-    abstract onAccessDenied(req: any, res: any, param: any): boolean;
+    onExecute(req: any, res: any, param: any): Promise<boolean>;
+    abstract isAccessAllowed(req: any, res: any, param: any): Promise<boolean>;
+    abstract onAccessDenied(req: any, res: any, param: any): Promise<boolean>;
     getLoginUrl(): string;
     setLoginUrl(loginUrl: string): void;
-    getSubject(req: any, res: any): Subject;
+    getSubject(req: any, res: any): Promise<Subject>;
+    isSessionaVailable(session: any): boolean;
     isLoginRequest(req: any, res: any): boolean;
     redirectToLogin(req: any, res: any): void;
     redirect(req: any, res: any, url: any): void;

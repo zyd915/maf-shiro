@@ -14,8 +14,8 @@ export declare class ShiroFilter extends AbstractShiroFilter {
     getSecurityManager(): SecurityManager;
     setFiltersResolver(filtersResolver: FiltersResolver): void;
     getFiltersResolver(): FiltersResolver;
-    doFilter(req: any, res: any): void;
-    updateSessionLastAccessTime(req: any, res: any): void;
+    doFilter(req: any, res: any): Promise<boolean>;
+    updateSessionLastAccessTime(req: any, res: any): Promise<void>;
 }
 export declare class ShiroFilterFactory {
     securityManager: SecurityManager;

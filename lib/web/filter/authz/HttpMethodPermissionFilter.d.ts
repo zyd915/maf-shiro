@@ -5,5 +5,5 @@ export declare class HttpMethodPermissionFilter extends PermissionsAuthorization
     getHttpMethodActions(): Map<string, string>;
     getHttpMethodAction(method: string): string;
     buildPermissions(configuredPerms: string[], action: string): string[];
-    isAccessAllowed(req: any, res: any, perms: string[]): boolean;
+    isAccessAllowed(req: any, res: any, perms: string[]): Promise<boolean>;
 }

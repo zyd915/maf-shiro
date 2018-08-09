@@ -6,5 +6,5 @@ export declare class NamedFilterList {
     setName(name: string): void;
     getName(): string;
     add(filter: Filter): void;
-    proxy(): (req: any, res: any) => void;
+    proxy(): (req: any, res: any) => Promise<boolean>;
 }

@@ -4,5 +4,5 @@ export declare abstract class AuthorizationFilter extends AccessControlFilter {
     constructor();
     setUnauthorizedUrl(unauthorizedUrl: string): void;
     getUnauthorizedUrl(): string;
-    onAccessDenied(req: any, res: any, param: any): boolean;
+    onAccessDenied(req: any, res: any, param: any): Promise<boolean>;
 }
